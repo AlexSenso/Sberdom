@@ -11,9 +11,7 @@ const list =  [
     {
         "info": "Вывести последнее оповещение.",
         "name": "/getLastNotification"
-    },
-
-
+    }
 ]
 
 export const CommandList = ({  }) => {
