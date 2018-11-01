@@ -1,3 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-export const Home = () => <div>Home Page</div>
+import { Layout } from './components'
+
+export const Home = () => (
+    <Layout>
+        <div>Home Page</div>
+    </Layout>
+)
