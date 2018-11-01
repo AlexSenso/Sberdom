@@ -8,11 +8,11 @@ export const SensorData = ({  }) => {
             <div className={style.sensors}>
                 <div className={style.sensorsItem}>
                     <div className={style.tempIcon}></div>
-                    <div className={style.value}>30°C</div>
+                    <div className={style.sensorsValue}>30°C</div>
                 </div>
                 <div className={style.sensorsItem}>
                     <div className={style.humIcon}></div>
-                    <div className={style.value}>90%</div>
+                    <div className={style.sensorsValue}>90%</div>
                 </div>
             </div>
             <div className={style.actions}>

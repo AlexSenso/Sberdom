@@ -8,4 +8,18 @@
   border: 1px solid #278433;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
   padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sensorData {
+  flex-shrink: 0;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.console {
+  flex-shrink: 0;
 }

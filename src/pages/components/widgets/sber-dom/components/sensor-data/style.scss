@@ -1,3 +1,7 @@
+.container {
+
+}
+
 .sensors {
   display: flex;
 }
@@ -27,7 +31,7 @@
   background-repeat: no-repeat;
 }
 
-.value {
+.sensorsValue {
   font-size: 28px;
   margin-left: 4px;
 }
@@ -83,3 +87,6 @@
     }
   }
 }
+
+
+
