@@ -1,0 +1,25 @@
+.field {
+  display: flex;
+
+  + .field {
+    margin-top: 8px;
+  }
+}
+
+.label {
+  font-size: 18px;
+}
+
+.value {
+  flex-shrink: 0;
+  color: rgba(38,38,38,.85);
+  font-size: 28px;
+
+  .label + & {
+    margin-left: 8px;
+  }
+}
+
+.info {
+
+}

@@ -4,6 +4,7 @@
 
 .sensors {
   display: flex;
+  justify-content: space-around;
 }
 
 .sensorsItem {
@@ -25,10 +26,11 @@
 
 .tempIcon,
 .humIcon {
-  width: 32px;
-  height: 46px;
+  width: 26px;
+  height: 34px;
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .sensorsValue {
@@ -39,11 +41,13 @@
 .actions {
   display: flex;
   overflow-x: auto;
+  margin-top: 8px;
 }
 
 .action {
   position: relative;
   flex-shrink: 0;
+  flex-grow: 1;
 
   &Input {
     position: absolute;
@@ -71,6 +75,8 @@
     cursor: pointer;
     transition: all 0.17s ease-in-out;
     box-shadow: inset 0 0 0 1px transparent;
+    width: -webkit-fill-available;
+    text-align: center;
   }
 
   &:first-child {

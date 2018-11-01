@@ -5,6 +5,6 @@ import style from  './style.scss'
 
 export const Home = () => (
     <Layout>
-        <div className={style.container}>Home Page</div>
+        <div className={style.container}></div>
     </Layout>
 )
