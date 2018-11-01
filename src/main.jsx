@@ -5,11 +5,13 @@ import {Provider} from 'react-redux'
 import {Root} from './router.jsx'
 import {store} from './__data__'
 import {connectMqtt} from './__data__/utils'
-//import { fetchNotification } from './__data__/actions'
+import { fetchNotification, fetchSmartBox } from './__data__/actions'
 
 
 connectMqtt(store.dispatch)
-//fetchNotification(store.dispatch)
+
+fetchNotification(store.dispatch)
+fetchSmartBox(store.dispatch)
 
 const app = <Provider store={store}>
     <Root/>
