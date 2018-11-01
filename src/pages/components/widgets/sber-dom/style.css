@@ -42,3 +42,25 @@
     width: 80px;
     height: 80px;
 }
+
+.title {
+    line-height: 30px;
+    font-size: 28px;
+    flex-grow: 1;
+}
+
+.close {
+    background-image: url('./images/close.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    flex-grow: 0;
+    cursor: pointer;
+}
+
+.header {
+    flex-shrink: 0;
+    margin-bottom: 20px;
+    display: flex;
+}
