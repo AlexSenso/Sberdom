@@ -1,14 +1,30 @@
 .container {
-    width: 944px;
-    margin-left: auto;
-    margin-right: auto;
+  width: 944px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.body {
+  flex-grow: 1;
+  min-height: 500px;
+  position: relative;
 }
 
 .header {
-   background-image: url("./images/1.jpg");
-   height: 50px;
+  background-image: url("./images/header.png");
+  background-repeat: no-repeat;
+  height: 200px;
+  flex-shrink: 0;
 }
 
 .footer {
-   background-image: url('./images/footer.png');
+  background-image: url('./images/footer.png');
+  background-repeat: no-repeat;
+  height: 250px;
+  flex-shrink: 0;
 }
+
+

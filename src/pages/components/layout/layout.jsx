@@ -1,15 +1,17 @@
 import React from 'react'
 
+import { SberDom } from '../widgets/sber-dom'
+
 import style from './style.scss'
 
 export const Layout = ({ children }) => {
     return (
         <div className={style.container}>
-
-
-            <img src="./images/1.jpg" alt="альтернативный текст" />
             <div className={style.header}></div>
-            <div>{children}</div>
+            <div className={style.body}>
+                {children}
+                <SberDom />
+            </div>
             <div className={style.footer}></div>
         </div>
     )

@@ -1,9 +1,10 @@
 import React from 'react'
 
 import { Layout } from './components'
+import style from  './style.scss'
 
 export const Home = () => (
     <Layout>
-        <div>Home Page</div>
+        <div className={style.container}>Home Page</div>
     </Layout>
 )
