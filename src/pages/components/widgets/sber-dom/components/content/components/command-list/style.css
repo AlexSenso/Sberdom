@@ -1,6 +1,9 @@
 .item {
   display: flex;
-  white-space: pre;
+  white-space: pre-wrap;
+}
+.item + .item {
+  margin-top: 8px;
 }
 .name {
   flex-shrink: 0;

@@ -5,6 +5,11 @@ import { SensorData, Content, Console } from './components'
 
 export class SberDom extends React.Component {
     render() {
+        // if (true) {
+        //     return (
+        //         <div className={style.prev} />
+        //     )
+        // }
         return (
             <div className={style.container}>
                 <div className={style.sensorData}>
