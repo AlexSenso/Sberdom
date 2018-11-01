@@ -11,7 +11,7 @@ const app = <Provider store={store}>
 </Provider>
 
 // надо глобально установить пакеты
-// npm install mqtt -g
+// npm install sensors -g
 // npm install mosca pino -g
 // npm run mqttServer
 connectMqtt(store.dispatch)

@@ -1,7 +1,7 @@
 import { createStore as createReduxStore, applyMiddleware, compose } from 'redux'
 import thunkMiddleware from 'redux-thunk'
 
-import { mqtt } from './reducers'
+import { sensors } from './reducers'
 
 export function createStore () {
     const composeEnhancers =
@@ -11,7 +11,7 @@ export function createStore () {
                 name: require('../../package.json').description // eslint-disable-line global-require
             }) : compose
 
-    return composeEnhancers(applyMiddleware(thunkMiddleware))(createReduxStore)(mqtt, {})
+    return composeEnhancers(applyMiddleware(thunkMiddleware))(createReduxStore)(sensors, {})
 }
 
 export default createStore()

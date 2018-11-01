@@ -17,7 +17,7 @@ server.on('published', function(packet, client) {
 
 server.on('ready', setup);
 
-// fired when the mqtt server is ready
+// fired when the sensors server is ready
 function setup() {
   console.log('Mosca server is up and running');
 }

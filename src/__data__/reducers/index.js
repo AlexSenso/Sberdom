@@ -1,1 +1,1 @@
-export { mqtt } from './mqtt'
+export { sensors } from './sensors'
