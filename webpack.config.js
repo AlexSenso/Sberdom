@@ -38,7 +38,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             inject: false,
             template: require('html-webpack-template'),
-            appMountId: 'app'
+            appMountId: 'app',
+            title: 'Sberdom',
         })
     ],
     module: {

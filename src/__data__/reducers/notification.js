@@ -10,5 +10,6 @@ export function notification(state = {}, action) {
             return _.assign({}, state, { requestStatus: STATUSES.SUCCESS, notification: action.notification })
         case FETCH_NOTIFICATION_FAILURE:
             return _.assign({}, state, { requestStatus: STATUSES.FAILURE })
+        default: return state
     }
 }
