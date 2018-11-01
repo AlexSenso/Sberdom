@@ -1,6 +1,6 @@
 import mqtt from 'mqtt'
 import _ from 'lodash'
-import {TOPIC, CONNECTION_URL, RECONNECT_TIMEOUT } from '../constants'
+import {TOPICS, CONNECTION_URL, RECONNECT_TIMEOUT } from '../constants'
 import { MQTT_CONNECT_FAILURE, MQTT_CONNECT_SUCCESS, MQTT_SUBSCRIBE_SUCCESS, MQTT_SUBSCRIBE_FAILURE, MQTT_RECIEVE_MESSAGE } from '../action-types'
 
 export const connectMqtt = (dispatch) => {
@@ -15,7 +15,7 @@ export const connectMqtt = (dispatch) => {
 
         dispatch({ type: MQTT_CONNECT_SUCCESS })
 
-        client.subscribe(TOPIC, function (err) {
+        client.subscribe(TOPICS, function (err) {
             const actionType = !_.isEmpty(err) ? MQTT_SUBSCRIBE_FAILURE : MQTT_SUBSCRIBE_SUCCESS
 
             dispatch({ type: actionType })

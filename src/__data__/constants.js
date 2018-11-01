@@ -1,4 +1,4 @@
-export const TOPIC = 'sensor_data'
+export const TOPICS = ['sensor_data', 'motion']
 export const CONNECTION_URL = 'ws://192.168.43.150:1884'
 export const RECONNECT_TIMEOUT = 2000
 
