@@ -1,6 +1,6 @@
 import React from 'react'
 
-import style from './style.scss'
+import style from './style.css'
 import { SensorData, Content, Console } from './components'
 
 export class SberDom extends React.Component {

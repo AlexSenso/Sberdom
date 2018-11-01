@@ -1,7 +1,7 @@
 import React from 'react'
 import _ from 'lodash'
 
-import style from './style.scss'
+import style from './style.css'
 
 const list =  [
     {

@@ -1,12 +1,12 @@
 import React from 'react'
 
-import style from './style.scss'
+import style from './style.css'
 import { SmartBox, CommandList } from './components'
 
 export const Content = ({  }) => {
     return (
         <div className={style.container}>
-            <CommandList />
+            <SmartBox />
         </div>
     )
 }

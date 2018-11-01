@@ -1,6 +1,6 @@
 import React from 'react'
 
-import style from './style.scss'
+import style from './style.css'
 
 export const Console = ({  }) => {
     const handleSubmit = (e) => {
