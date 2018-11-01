@@ -1,15 +1,14 @@
 .container {
-  height: 300px;
-  width: 280px;
+  height: 420px;
+  width: 330px;
   position: absolute;
   bottom: 20px;
   right: 48px;
-  border-radius: 4px;
-  border: 1px solid #278433;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  padding: 8px 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 23px;
+  padding: 8px 15px;
   display: flex;
   flex-direction: column;
+  background-color: #fff;
 }
 
 .sensorData {

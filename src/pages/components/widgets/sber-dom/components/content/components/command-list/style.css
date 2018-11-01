@@ -1,0 +1,10 @@
+.item {
+  display: flex;
+  white-space: pre;
+}
+.name {
+  flex-shrink: 0;
+}
+.info {
+
+}

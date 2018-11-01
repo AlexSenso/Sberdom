@@ -2,7 +2,7 @@ import React from 'react'
 
 import { SberDom } from '../widgets/sber-dom'
 
-import style from './style.scss'
+import style from './style.css'
 
 export const Layout = ({ children }) => {
     return (
