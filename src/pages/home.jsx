@@ -1,3 +1,10 @@
-import React from 'react';
+import React from 'react'
 
-export const Home = () => <div>Home Page</div>
+import { Layout } from './components'
+import style from  './style.scss'
+
+export const Home = () => (
+    <Layout>
+        <div className={style.container}>Home Page</div>
+    </Layout>
+)
