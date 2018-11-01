@@ -16,8 +16,9 @@ module.exports = {
         contentBase: './dist',
         hot: true,
         setup: function(app, server) {
-            app.get('^/api/*$', function(req, res) {
-                const fpath = path.resolve(__dirname, `stub/${req.path}.json`)
+            app.post('*', function(req, res) {
+                const filename = req.path.split('/').pop()
+                const fpath = path.resolve(__dirname, `stub/${filename}.json`)
                 fs.readFile(fpath, (err, data) => {
                     if (err) {
                         return res.status(404).send({
