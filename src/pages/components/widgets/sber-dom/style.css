@@ -1,7 +1,7 @@
 .container {
-  height: 420px;
+  height: 460px;
   width: 330px;
-  position: absolute;
+    position: fixed;
   bottom: 20px;
   right: 48px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 23px;
@@ -26,7 +26,7 @@
 .prev {
     width: 60px;
     height: 60px;
-    position: absolute;
+    position: fixed;
     bottom: 20px;
     right: 48px;
     background-image: url('./images/10.png');
@@ -41,4 +41,26 @@
 .prev:hover {
     width: 80px;
     height: 80px;
+}
+
+.title {
+    line-height: 30px;
+    font-size: 28px;
+    flex-grow: 1;
+}
+
+.close {
+    background-image: url('./images/close.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    flex-grow: 0;
+    cursor: pointer;
+}
+
+.header {
+    flex-shrink: 0;
+    margin-bottom: 20px;
+    display: flex;
 }

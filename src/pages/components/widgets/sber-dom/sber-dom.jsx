@@ -12,6 +12,10 @@ export class SberDom extends React.Component {
         // }
         return (
             <div className={style.container}>
+                <div className={style.header}>
+                    <div className={style.title}>Сбербанк Умный дом</div>
+                    <div className={style.close} />
+                </div>
                 <div className={style.sensorData}>
                     <SensorData />
                 </div>
