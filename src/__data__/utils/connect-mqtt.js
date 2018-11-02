@@ -24,8 +24,11 @@ export const connectMqtt = (dispatch) => {
 
     client.on('message', function (topic, message) {
         const decodedMessage = new TextDecoder('utf-8').decode(message)
-        dispatch({ type: MQTT_RECIEVE_MESSAGE, topic, message: decodedMessage })
-        //client.end()
+        const parsedMessage = JSON.parse(decodedMessage)
+
+        if(!_.has(parsedMessage, 'error')) {
+            dispatch({ type: MQTT_RECIEVE_MESSAGE, topic, message: parsedMessage })
+        }
     })
 
     client.on('error', function (error) {

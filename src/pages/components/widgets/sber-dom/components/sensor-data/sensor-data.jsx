@@ -1,18 +1,34 @@
 import React from 'react'
+import _ from 'lodash'
+import { connect } from 'react-redux'
 
 import style from './style.css'
 
-export const SensorData = ({  }) => {
+const mapStateToProps = (state) => {
+    //TODO перенести в селекторы
+    const temperature = _.get(state, ['sensors', 'sensor_data', 'temperature'], {})
+    const humidity = _.get(state, ['sensors', 'sensor_data', 'humidity'], {})
+
+    return {
+        temperatureValue: temperature.value,
+        temperatureStatus: temperature.status,
+        humidityValue: humidity.value,
+        humidityStatus: humidity.status,
+    }
+}
+
+export const SensorData =connect(mapStateToProps, null)(
+    ({temperatureValue, temperatureStatus, humidityValue, humidityStatus }) => {
     return (
         <div className={style.container}>
             <div className={style.sensors}>
                 <div className={style.sensorsItem}>
                     <div className={style.tempIcon}></div>
-                    <div className={style.sensorsValue}>30°C</div>
+                    <div className={style.sensorsValue}>{`${temperatureValue}°C`}</div>
                 </div>
                 <div className={style.sensorsItem}>
                     <div className={style.humIcon}></div>
-                    <div className={style.sensorsValue}>90%</div>
+                    <div className={style.sensorsValue}>{`${humidityValue}%`}</div>
                 </div>
             </div>
             <div className={style.actions}>
@@ -32,3 +48,4 @@ export const SensorData = ({  }) => {
         </div>
     )
 }
+)
