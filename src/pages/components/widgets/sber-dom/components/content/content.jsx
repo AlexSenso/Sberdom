@@ -11,7 +11,7 @@ const mapStateToProps = (state) => ({
     smartBox: _.get(state, ['smartBox', 'smartBox'])
 })
 
-export class Content extends React.Component {
+export class Component extends React.Component {
     render() {
         const { notification, smartBox } = this.props
 
@@ -23,3 +23,5 @@ export class Content extends React.Component {
         )
     }
 }
+
+export const Content = connect(mapStateToProps, null)(Component)

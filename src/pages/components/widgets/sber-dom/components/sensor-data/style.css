@@ -5,6 +5,7 @@
 .sensors {
   display: flex;
   justify-content: space-around;
+  height: 34px;
 }
 
 .sensorsItem {

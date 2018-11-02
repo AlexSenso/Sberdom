@@ -8,7 +8,6 @@ export const Notification = ({ cash, id, info, name }) => {
             <div className={style.info}>{info}</div>
             <div className={style.boxState}>
                 <div className={style.name}>{name}</div>
-                <div>{' - '}</div>
                 <div className={style.info}>{cash}</div>
             </div>
             <button className={style.action}>Закрыть</button>
