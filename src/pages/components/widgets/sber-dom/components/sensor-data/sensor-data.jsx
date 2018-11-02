@@ -10,25 +10,24 @@ const mapStateToProps = (state) => {
     const humidity = _.get(state, ['sensors', 'sensor_data', 'humidity'], {})
 
     return {
-        temperatureValue: temperature.value,
-        temperatureStatus: temperature.status,
-        humidityValue: humidity.value,
-        humidityStatus: humidity.status,
+        temperature: temperature.value,
+        humidity: humidity.value,
     }
 }
 
 export const SensorData =connect(mapStateToProps, null)(
-    ({temperatureValue, temperatureStatus, humidityValue, humidityStatus }) => {
+    ({temperature, humidity }) => {
+
     return (
         <div className={style.container}>
             <div className={style.sensors}>
                 <div className={style.sensorsItem}>
                     <div className={style.tempIcon}></div>
-                    <div className={style.sensorsValue}>{`${temperatureValue}°C`}</div>
+                    <div className={style.sensorsValue}>{temperature ? `${temperature}°C` : null}</div>
                 </div>
                 <div className={style.sensorsItem}>
                     <div className={style.humIcon}></div>
-                    <div className={style.sensorsValue}>{`${humidityValue}%`}</div>
+                    <div className={style.sensorsValue}>{humidity ? `${humidity}%`: null}</div>
                 </div>
             </div>
             <div className={style.actions}>
