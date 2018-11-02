@@ -17,7 +17,7 @@ const mapStateToProps = (state) => {
     }
 }
 
-export const SensorData =connect(mapStateToProps, null)(
+export const SensorData = connect(mapStateToProps, null)(
     ({temperatureValue, temperatureStatus, humidityValue, humidityStatus }) => {
     return (
         <div className={style.container}>
