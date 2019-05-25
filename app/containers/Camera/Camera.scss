@@ -1,0 +1,33 @@
+.camera-page {
+
+}
+
+.video-list {
+  display: flex;
+  margin: 20px 20px;
+}
+
+.video-wrapper {
+  background-color: #fff;
+  padding: 20px 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+
+  &:not(:first-child) {
+    margin-left: 20px;
+  }
+}
+
+.video-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.video-description {
+  font-size: 16px;
+  color: #7d8b8d;
+  margin-top: 10px;
+  margin-left: 20px;
+}

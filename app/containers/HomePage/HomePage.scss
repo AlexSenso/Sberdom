@@ -939,7 +939,7 @@
     &_radio_wrapper {
       display: flex;
       align-items: center;
-      &:not(first-child) {
+      &:not(:first-child) {
         margin-top: 18px;
       }
     }
