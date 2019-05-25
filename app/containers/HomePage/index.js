@@ -13,11 +13,12 @@ import './HomePage.scss';
 import Service from '../Service';
 import Profile from '../Profile';
 import Camera from '../Camera';
+import News from '../News';
 
 import { LeftSidebar } from '../App/components/LeftSidebar';
 
 const mainMenuItems = ['НОВОСТИ', 'СЕРВИС', 'ИВАН', 'ВОКРУГ'];
-const pages = [() => <div>НОВОСТИ</div>, Service, Profile, Camera];
+const pages = [News, Service, Profile, Camera];
 
 /* eslint-disable react/prefer-stateless-function */
 export class HomePage extends React.PureComponent {
