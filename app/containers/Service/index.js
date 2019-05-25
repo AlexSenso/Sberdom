@@ -20,58 +20,66 @@ export default class Service extends React.Component {
             content="Service"
           />
         </Helmet>
-        <ul>
-          <li className="box-item service-item-wrapper">
-            <div className="service-item">
-              <div className="service-item-title">Сантехника</div>
-              <div className="service-item-description">
-                Раковины, трубы, унитазы
+        <div className="service-lists">
+          <ul className="service-list">
+            <li className="box-item service-item-wrapper">
+              <div className="service-item">
+                <div className="service-item-title">Сантехника</div>
+                <div className="service-item-description">
+                  Раковины, трубы, унитазы
+                </div>
+                <div className="service-item-link" />
               </div>
-            </div>
-          </li>
-          <li className="box-item service-item-wrapper">
-            <div className="service-item">
-              <div className="service-item-title">Электрика</div>
-              <div className="service-item-description">
-                Лампочки, розетки, провода
+            </li>
+            <li className="box-item service-item-wrapper">
+              <div className="service-item">
+                <div className="service-item-title">Электрика</div>
+                <div className="service-item-description">
+                  Лампочки, розетки, провода
+                </div>
+                <div className="service-item-link" />
               </div>
-            </div>
-          </li>
-          <li className="box-item service-item-wrapper">
-            <div className="service-item">
-              <div className="service-item-title">Мастера по технике</div>
-              <div className="service-item-description">
-                Теливизор, стиральная машина, посудомойка
+            </li>
+            <li className="box-item service-item-wrapper">
+              <div className="service-item">
+                <div className="service-item-title">Мастера по технике</div>
+                <div className="service-item-description">
+                  Теливизор, стиральная машина, посудомойка
+                </div>
+                <div className="service-item-link" />
               </div>
-            </div>
-          </li>
-        </ul>
-        <ul>
-          <li className="box-item service-item-wrapper">
-            <div className="service-item">
-              <div className="service-item-title">Скорую помощь</div>
-              <div className="service-item-description">
-                Инфаркты, передозы, простуда
+            </li>
+          </ul>
+          <ul className="service-list">
+            <li className="box-item service-item-wrapper">
+              <div className="service-item">
+                <div className="service-item-title">Скорую помощь</div>
+                <div className="service-item-description">
+                  Инфаркты, передозы, простуда
+                </div>
+                <div className="service-item-link" />
               </div>
-            </div>
-          </li>
-          <li className="box-item service-item-wrapper">
-            <div className="service-item">
-              <div className="service-item-title">Полицию</div>
-              <div className="service-item-description">
-                Шумные соседи, кражи и убийства, запрещенные мемасы
+            </li>
+            <li className="box-item service-item-wrapper">
+              <div className="service-item">
+                <div className="service-item-title">Полицию</div>
+                <div className="service-item-description">
+                  Шумные соседи, кражи и убийства, запрещенные мемасы
+                </div>
+                <div className="service-item-link" />
               </div>
-            </div>
-          </li>
-          <li className="box-item service-item-wrapper">
-            <div className="service-item">
-              <div className="service-item-title">Пожарных</div>
-              <div className="service-item-description">
-                Пожар
+            </li>
+            <li className="box-item service-item-wrapper">
+              <div className="service-item">
+                <div className="service-item-title">Пожарных</div>
+                <div className="service-item-description">
+                  Пожар
+                </div>
+                <div className="service-item-link" />
               </div>
-            </div>
-          </li>
-        </ul>
+            </li>
+          </ul>
+        </div>
       </div>
     );
   }

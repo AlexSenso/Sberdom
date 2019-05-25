@@ -14,7 +14,7 @@ const AppWrapper = styled.div`
   min-height: 100%;
 `;
 
-const mainMenuItems = ['ORDERS', 'CATALOGUE', 'SETTINGS'];
+const mainMenuItems = ['НОВОСТИ', 'СЕРВИС', 'SETTINGS'];
 const pages = [
   HomePage,
   Service,

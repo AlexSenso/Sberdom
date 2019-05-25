@@ -1,5 +1,14 @@
+.service-lists {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
 .service-item {
   padding: 20px 30px;
+  height: 100px;
+  position: relative;
+  cursor: pointer;
 
   &-wrapper {
     margin-left: 10px;
@@ -10,8 +19,6 @@
     }
   }
 
-
-
   &-title {
     font-size: 20px;
     font-weight: bold;
@@ -21,5 +28,14 @@
   &-description {
     font-size: 16px;
     color: #7d8b8d;
+  }
+
+  &-link {
+    height: 24px;
+    width: 24px;
+    background-image: url('./images/slices.png');
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 12px);
   }
 }
