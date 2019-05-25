@@ -1,10 +1,10 @@
 .camera-page {
-
+  margin: 0 20px;
 }
 
 .video-list {
   display: flex;
-  margin: 20px 20px;
+  margin: 20px 0;
 }
 
 .video-wrapper {
@@ -30,4 +30,32 @@
   color: #7d8b8d;
   margin-top: 10px;
   margin-left: 20px;
+}
+
+.camera-menu {
+  background-color: #fbfbfb;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: flex-start;
+  padding: 32px 20px;
+
+  &-item {
+    font-size: 14px;
+    font-weight: bold;
+    color: #7d8b8d;
+    cursor: pointer;
+
+    &:hover {
+      color: #3c3c3c;
+    }
+
+    &:not(:first-child) {
+      margin-left: 40px;
+    }
+
+    &.active {
+      color: #3c3c3c;
+      border-bottom: solid 5px #3c3c3c;
+    }
+  }
 }

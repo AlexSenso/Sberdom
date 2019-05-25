@@ -2,9 +2,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
-import { createStructuredSelector } from 'reselect';
 import injectReducer from 'utils/injectReducer';
 import injectSaga from 'utils/injectSaga';
+import _ from 'lodash';
 
 import reducer from './reducer';
 import saga from './saga';
@@ -15,7 +15,6 @@ import Profile from '../Profile';
 import Camera from '../Camera';
 
 import { LeftSidebar } from '../App/components/LeftSidebar';
-import _ from "lodash";
 
 const mainMenuItems = ['НОВОСТИ', 'СЕРВИС', 'ИВАН', 'ВОКРУГ'];
 const pages = [() => <div>НОВОСТИ</div>, Service, Profile, Camera];

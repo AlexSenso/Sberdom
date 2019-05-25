@@ -1,12 +1,46 @@
 import React from 'react';
 
+const menuItems = [
+  'СЕЙЧАС',
+  'АРХИВ ЗА 7 ДНЕЙ',
+]
+
 import './Camera.scss';
+import _ from 'lodash';
+import classNames from 'classnames';
 
 export default class Camera extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      activeSlide: 0,
+    };
+  }
+
+  onMenuClick = event => {
+    event.preventDefault();
+    this.setState({ activeSlide: parseInt(event.target.dataset.key) });
+  };
 
   render() {
     return (
       <div className="camera-page">
+        <ul className="camera-menu">
+          {_.map(menuItems, (item, key) => (
+            <li
+              key={key}
+              className={classNames([
+                'camera-menu-item',
+                { active: this.state.activeSlide === key },
+              ])}
+              onClick={this.onMenuClick}
+              data-key={key}
+            >
+              {item}
+            </li>
+          ))}
+        </ul>
         <div className="video-list">
           <div className="video-wrapper">
             <img

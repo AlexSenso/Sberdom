@@ -2,14 +2,14 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 
 import './Service.scss';
+import classNames from 'classnames';
+import _ from 'lodash';
 import image1 from './images/1.png';
 import image2 from './images/copy-2.png';
 import image3 from './images/copy-4.png';
 import image4 from './images/2.png';
 import image5 from './images/copy.png';
 import image6 from './images/copy-3.png';
-import _ from 'lodash';
-import classNames from 'classnames';
 
 const menuItems = [
   'НОВЫЙ ВЫЗОВ',
