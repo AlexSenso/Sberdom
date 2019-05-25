@@ -32,6 +32,8 @@ import configureStore from './configureStore';
 // Import i18n messages
 import { translationMessages } from './i18n';
 
+import {connectMqtt} from './mqtt'
+
 // Observe loading of Open Sans (to remove open sans, remove the <link> tag in
 // the index.html file and this observer)
 const openSansObserver = new FontFaceObserver('Open Sans', {});
@@ -44,6 +46,7 @@ openSansObserver.load().then(() => {
 // Create redux store with history
 const initialState = {};
 const store = configureStore(initialState, history);
+connectMqtt(store.dispatch)
 const MOUNT_NODE = document.getElementById('app');
 
 const render = messages => {

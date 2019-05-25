@@ -12,9 +12,10 @@ import saga from './saga';
 import './HomePage.scss';
 import Service from '../Service';
 import { LeftSidebar } from '../App/components/LeftSidebar';
+import _ from "lodash";
 
 const mainMenuItems = ['НОВОСТИ', 'СЕРВИС', 'SETTINGS'];
-const pages = [() => <div>Димас</div>, Service, () => <div>Лох</div>];
+const pages = [() => <div></div>, Service, () => <div></div>];
 
 /* eslint-disable react/prefer-stateless-function */
 export class HomePage extends React.PureComponent {
@@ -32,7 +33,6 @@ export class HomePage extends React.PureComponent {
   };
 
   render() {
-
     const Page = pages[this.state.activeSlide]
     // const { } = this.props;
     // const { } = this.state;
@@ -71,14 +71,26 @@ export function mapDispatchToProps(dispatch) {
   };
 }
 
-const mapStateToProps = createStructuredSelector({
-  // repos: makeSelectRepos(),
-  // username: makeSelectUsername(),
-  // loading: makeSelectLoading(),
-  // error: makeSelectError(),
-  // catalog: makeSelectCatalog(),
-  // feedbacks: makeSelectFeedbacks(),
-});
+const mapStateToProps = (state) => {
+  const temperature = _.get(state.toJS(), ['home', 'sensor_data', 'temperature'], {})
+  const humidity = _.get(state.toJS(), ['home', 'sensor_data', 'humidity'], {})
+  const motion = _.get(state.toJS(), ['home', 'motion'], {})
+
+  return {
+    temperature: temperature.value,
+    humidity: humidity.value,
+    motion: motion.motionDetected
+  }
+}
+
+// const mapStateToProps = createStructuredSelector({
+//   // repos: makeSelectRepos(),
+//   // username: makeSelectUsername(),
+//   // loading: makeSelectLoading(),
+//   // error: makeSelectError(),
+//   // catalog: makeSelectCatalog(),
+//   // feedbacks: makeSelectFeedbacks(),
+// });
 
 const withConnect = connect(
   mapStateToProps,
