@@ -12,7 +12,7 @@ export class LeftSidebar extends React.PureComponent {
     return (
       <div className="left-sidebar-wrapper box-item">
         <div className="left-sidebar">
-          <div>LOGO</div>
+          <div className="main-logo" />
           <ul className="left-sidebar-menu">
             {_.map(items, (item, key) => (
               <li

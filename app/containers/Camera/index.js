@@ -43,24 +43,30 @@ export default class Camera extends React.Component {
         </ul>
         <div className="video-list">
           <div className="video-wrapper">
-            <img
-              alt=""
-              height="262"
-              width="350"
-              src="http://proxy70.remot3.it:34582"
-            />
+            <div className="img-wrapper">
+              <img
+                alt=""
+                height="262"
+                width="350"
+                src="http://proxy70.remot3.it:34600"
+              />
+              <div className="video-icon">• LIVE</div>
+            </div>
             <div>
               <div className="video-title">Двор</div>
               <div className="video-description">Ленинградский проспект 32</div>
             </div>
           </div>
           <div className="video-wrapper">
-            <img
-              alt=""
-              height="262"
-              width="350"
-              src="http://proxy70.remot3.it:34587"
-            />
+            <div className="img-wrapper">
+              <img
+                alt=""
+                height="262"
+                width="350"
+                src="http://proxy73.rt3.io:31354"
+              />
+              <div className="video-icon">• LIVE</div>
+            </div>
             <div>
               <div className="video-title">Детская площадка</div>
               <div className="video-description">Ленинградский проспект 32</div>

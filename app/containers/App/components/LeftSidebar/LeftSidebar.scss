@@ -1,5 +1,6 @@
 .left-sidebar {
   height: 100%;
+  padding-top: 30px;
 
   &-wrapper {
     width: 230px;
@@ -23,4 +24,13 @@
       background-color: #3c3c3c;
     }
   }
+}
+
+.main-logo {
+  width: 160px;
+  height: 66px;
+  background-image: url('./images/logo.png');
+  margin-bottom: 60px;
+  margin-left: 20px;
+  cursor: pointer;
 }
