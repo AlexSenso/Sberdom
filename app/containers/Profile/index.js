@@ -75,7 +75,7 @@ export default class Profile extends React.Component {
             <div className="pay_iframe_wrapper">
               <iframe
                 title="paymentFrame"
-                src={this.state.paymentUrl}
+                src="http://18.188.91.108/"
                 width="100%"
                 height="100%"
                 align="left"
