@@ -2,17 +2,38 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 
 import './Service.scss';
+import image1 from './images/1.png';
+import image2 from './images/copy-2.png';
+import image3 from './images/copy-4.png';
+import image4 from './images/2.png';
+import image5 from './images/copy.png';
+import image6 from './images/copy-3.png';
+import _ from 'lodash';
+import classNames from 'classnames';
+
+const menuItems = [
+  'НОВЫЙ ВЫЗОВ',
+  'АРХИВ ЗАЯВОК',
+]
 
 export default class Service extends React.Component {
-  // Since state and props are static,
-  // there's no need to re-render this component
-  shouldComponentUpdate() {
-    return false;
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      activeSlide: 0,
+    };
   }
+
+  onMenuClick = event => {
+    event.preventDefault();
+    this.setState({ activeSlide: parseInt(event.target.dataset.key) });
+  };
 
   render() {
     return (
-      <div>
+      <div className="service-page">
         <Helmet>
           <title>Service</title>
           <meta
@@ -20,11 +41,29 @@ export default class Service extends React.Component {
             content="Service"
           />
         </Helmet>
+        <ul className="service-menu">
+          {_.map(menuItems, (item, key) => (
+            <li
+              key={key}
+              className={classNames([
+                'service-menu-item',
+                { active: this.state.activeSlide === key },
+              ])}
+              onClick={this.onMenuClick}
+              data-key={key}
+            >
+              {item}
+            </li>
+          ))}
+        </ul>
         <div className="service-lists">
           <ul className="service-list">
             <li className="box-item service-item-wrapper">
               <div className="service-item">
-                <div className="service-item-title">Сантехника</div>
+                <div className="service-item-title-wrapper">
+                  <img className="service-item-image" src={image1} alt="icon" />
+                  <div className="service-item-title">Сантехника</div>
+                </div>
                 <div className="service-item-description">
                   Раковины, трубы, унитазы
                 </div>
@@ -33,7 +72,10 @@ export default class Service extends React.Component {
             </li>
             <li className="box-item service-item-wrapper">
               <div className="service-item">
-                <div className="service-item-title">Электрика</div>
+                <div className="service-item-title-wrapper">
+                  <img className="service-item-image" src={image2} alt="icon" />
+                  <div className="service-item-title">Электрика</div>
+                </div>
                 <div className="service-item-description">
                   Лампочки, розетки, провода
                 </div>
@@ -42,7 +84,10 @@ export default class Service extends React.Component {
             </li>
             <li className="box-item service-item-wrapper">
               <div className="service-item">
-                <div className="service-item-title">Мастера по технике</div>
+                <div className="service-item-title-wrapper">
+                  <img className="service-item-image" src={image3} alt="icon" />
+                  <div className="service-item-title">Мастера по технике</div>
+                </div>
                 <div className="service-item-description">
                   Теливизор, стиральная машина, посудомойка
                 </div>
@@ -53,7 +98,10 @@ export default class Service extends React.Component {
           <ul className="service-list">
             <li className="box-item service-item-wrapper">
               <div className="service-item">
-                <div className="service-item-title">Скорую помощь</div>
+                <div className="service-item-title-wrapper">
+                  <img className="service-item-image" src={image4} alt="icon" />
+                  <div className="service-item-title">Скорую помощь</div>
+                </div>
                 <div className="service-item-description">
                   Инфаркты, передозы, простуда
                 </div>
@@ -62,7 +110,10 @@ export default class Service extends React.Component {
             </li>
             <li className="box-item service-item-wrapper">
               <div className="service-item">
-                <div className="service-item-title">Полицию</div>
+                <div className="service-item-title-wrapper">
+                  <img className="service-item-image" src={image5} alt="icon" />
+                  <div className="service-item-title">Полицию</div>
+                </div>
                 <div className="service-item-description">
                   Шумные соседи, кражи и убийства, запрещенные мемасы
                 </div>
@@ -71,7 +122,10 @@ export default class Service extends React.Component {
             </li>
             <li className="box-item service-item-wrapper">
               <div className="service-item">
-                <div className="service-item-title">Пожарных</div>
+                <div className="service-item-title-wrapper">
+                  <img className="service-item-image" src={image6} alt="icon" />
+                  <div className="service-item-title">Пожарных</div>
+                </div>
                 <div className="service-item-description">
                   Пожар
                 </div>
