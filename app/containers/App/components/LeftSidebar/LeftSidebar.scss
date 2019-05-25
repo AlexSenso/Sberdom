@@ -1,0 +1,26 @@
+.left-sidebar {
+  height: 100%;
+
+  &-wrapper {
+    width: 230px;
+    flex-shrink: 0;
+  }
+
+  &-menu-item {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 20px 0 20px 30px;
+    color: #3c3c3c;
+    cursor: pointer;
+    transition: .4s;
+
+    &:hover {
+      background-color: #eef3f4;
+    }
+
+    &.active {
+      color: #fff;
+      background-color: #3c3c3c;
+    }
+  }
+}

@@ -49,118 +49,48 @@ export class HomePage extends React.PureComponent {
   constructor(props) {
     super(props);
 
-    this.state = {
-      isCartOpen: false,
-      isInit: true,
-    };
+    this.state = {};
   }
 
-  handleClickOpen = e => {
-    e.preventDefault();
-    this.setState({ isCartOpen: true });
-  };
-
-  handleCartClose = e => {
-    e.preventDefault();
-    this.setState({ isCartOpen: false, isInit: false });
-  };
-
-  handlePaidClose = e => {
-    e.preventDefault();
-    window.location.href = window.location.origin;
-  };
-
-  handleShoppingCartClick = () => {
-    this.setState({ isCartOpen: false, isInit: false });
-  };
-
-  handlePlaceClick = e => {
-    e.preventDefault();
-    scrollTo(e);
-  };
-
   render() {
-    const { catalog, onAddToCart, feedbacks } = this.props;
-    const { isCartOpen, isInit } = this.state;
+    // const { } = this.props;
+    // const { } = this.state;
 
     return (
       <article>
         <Helmet>
-          <title>
-            Доставка правильной еды в Омске, диетическое питание с доставкой на
-            дом и офис
-          </title>
-          <meta
-            name="description"
-            content="Полезная и вкусная еда без сахара, без ГМО с доставкой в Омске. Правильный рацион питания на каждый день, заказ 8 (913)-6-288-557"
-          />
-          <meta
-            name="keywords"
-            content="овсянка питание правильно еда без сахар гмо доставка омск"
-          />
+          <title>Живой дом</title>
+          <meta name="description" content="Живой дом" />
+          <meta name="keywords" content="Живой дом" />
         </Helmet>
-
-        <WhySection />
-        <ReviewsSection />
-        <ProgramSection
-          items={catalog.programs}
-          addToCart={onAddToCart}
-          openCart={this.handleClickOpen}
-        />
-        <ProductSection
-          items={catalog.detox}
-          addToCart={onAddToCart}
-          openCart={this.handleClickOpen}
-        />
-        <SweetsSection
-          items={catalog.sweets}
-          addToCart={onAddToCart}
-          openCart={this.handleClickOpen}
-        />
-        <FeedbacksSection items={feedbacks} />
-        <CallBackSection />
-        <Cart
-          isCartOpen={isCartOpen}
-          isInit={isInit}
-          handleClickOpen={this.handleClickOpen}
-          handleCartClose={this.handleCartClose}
-          handlePaidClose={this.handlePaidClose}
-          handleShoppingCartClick={this.handleShoppingCartClick}
-          handlePlaceClick={this.handlePlaceClick}
-        />
+        <div>HomePage</div>
       </article>
     );
   }
 }
 
-HomePage.propTypes = {
-  catalog: PropTypes.object.isRequired,
-  feedbacks: PropTypes.array.isRequired,
-  onAddToCart: PropTypes.func,
-};
-
 export function mapDispatchToProps(dispatch) {
   return {
-    onChangeUsername: evt => dispatch(changeUsername(evt.target.value)),
-    onSubmitForm: evt => {
-      if (evt !== undefined && evt.preventDefault) evt.preventDefault();
-      dispatch(loadRepos());
-    },
-    onAddToCart: item => {
-      dispatch(startAnimation());
-      dispatch(addToCart(item));
-      setTimeout(() => dispatch(stopAnimation()), 200);
-    },
+    // onChangeUsername: evt => dispatch(changeUsername(evt.target.value)),
+    // onSubmitForm: evt => {
+    //   if (evt !== undefined && evt.preventDefault) evt.preventDefault();
+    //   dispatch(loadRepos());
+    // },
+    // onAddToCart: item => {
+    //   dispatch(startAnimation());
+    //   dispatch(addToCart(item));
+    //   setTimeout(() => dispatch(stopAnimation()), 200);
+    // },
   };
 }
 
 const mapStateToProps = createStructuredSelector({
-  repos: makeSelectRepos(),
-  username: makeSelectUsername(),
-  loading: makeSelectLoading(),
-  error: makeSelectError(),
-  catalog: makeSelectCatalog(),
-  feedbacks: makeSelectFeedbacks(),
+  // repos: makeSelectRepos(),
+  // username: makeSelectUsername(),
+  // loading: makeSelectLoading(),
+  // error: makeSelectError(),
+  // catalog: makeSelectCatalog(),
+  // feedbacks: makeSelectFeedbacks(),
 });
 
 const withConnect = connect(

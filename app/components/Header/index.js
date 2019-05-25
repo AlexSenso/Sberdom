@@ -77,8 +77,7 @@ class Header extends React.Component {
                   <div className="header__block">
                     <div className="header__title">
                       <p className="header__title_text">
-                        Наша миссия - вырастить правильное поколение здоровых
-                        женщин
+                        Наша миссия
                       </p>
                     </div>
                   </div>

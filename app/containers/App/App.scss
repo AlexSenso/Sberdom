@@ -1,2 +1,76 @@
-@import 'fonts';
-@import 'slider';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+  margin: 0;
+  font-family: 'Open Sans',serif;
+}
+
+article, aside, footer, header, nav, section {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.layout-wrapper {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.region-content {
+  background-color: #fbfbfb;
+  flex-grow: 1;
+}
+
+.box-item {
+  position: relative;
+
+  &:before {
+    display: block;
+    content: '';
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    position: absolute;
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+    left: 10px;
+    top: 10px;
+    z-index: 1;
+  }
+
+  > * {
+    z-index: 2;
+    background-color: #fff;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+}
+
+@media screen and (max-width: 920px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 520px) {
+
+}
