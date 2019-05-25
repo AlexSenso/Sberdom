@@ -48,7 +48,7 @@ export default class Camera extends React.Component {
                 alt=""
                 height="262"
                 width="350"
-                src="http://proxy70.remot3.it:34600"
+                src="http://18.188.91.108/cam1"
               />
               <div className="video-icon">• LIVE</div>
             </div>
@@ -63,7 +63,7 @@ export default class Camera extends React.Component {
                 alt=""
                 height="262"
                 width="350"
-                src="http://proxy73.rt3.io:31354"
+                src="http://18.188.91.108/cam2"
               />
               <div className="video-icon">• LIVE</div>
             </div>

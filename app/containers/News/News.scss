@@ -8,8 +8,30 @@
   background-color: #fff;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 
-  &:not(:first-child) {
-    margin-top: 10px;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+@keyframes blink2 {
+  25% { background-color: #fefcdd; }
+  75% { background-color: #fff; }
+}
+
+.news-item-mail {
+  animation: blink2 2s linear infinite;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  transition: all .5s;
+  background-color: #fff;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+
+  &-active {
+    height: 100px;
+    padding: 20px;
+    margin-bottom: 10px;
   }
 }
 

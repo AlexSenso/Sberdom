@@ -1,5 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
+import classNames from 'classnames';
 
 import './News.scss';
 import { connect } from 'react-redux';
@@ -60,6 +61,18 @@ export class News extends React.Component {
         <div className="news-lists">
           <div className="news">
             <ul className="news-list">
+              <li
+                className={classNames([
+                  'news-item-mail',
+                  { 'news-item-mail-active': this.props.motion },
+                ])}
+              >
+                <div className="news-title">Вам письмо!</div>
+                <div className="news-description-wrapper">
+                  <div className="news-description">Что-то интересное упало в почтовый ящик</div>
+                  <div className="news-date">Только что</div>
+                </div>
+              </li>
               {_.map(newsItems, (item, key) => (
                 <li
                   key={key}
@@ -114,10 +127,12 @@ export class News extends React.Component {
 const mapStateToProps = state => {
   const temperature = _.get(state.toJS(), ['home', 'sensor_data', 'temperature'], {})
   const humidity = _.get(state.toJS(), ['home', 'sensor_data', 'humidity'], {})
+  const motion = _.get(state.toJS(), ['home', 'motion'], {})
 
   return {
-    temperature: _.get(temperature, 'value'),
-    humidity: _.get(humidity, 'value'),
+    temperature: temperature.value,
+    humidity: humidity.value,
+    motion: motion.motionDetected,
   }
 }
 

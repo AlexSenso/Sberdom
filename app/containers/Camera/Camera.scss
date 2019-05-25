@@ -64,7 +64,7 @@
   position: relative;
 }
 
-@-webkit-keyframes blink {
+@keyframes blink {
   25% { opacity: .5; }
   50% { opacity: 0; }
   75% { opacity: .5; }
