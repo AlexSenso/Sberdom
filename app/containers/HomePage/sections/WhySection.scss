@@ -1,0 +1,17 @@
+.why {
+  padding: 125px 0 60px;
+  background: url(img/bg_why.png) no-repeat 115% 0;
+  background-size: contain;
+  &__block {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__elem {
+    &_img {
+      margin: 0 auto 30px;
+    }
+    &_text {
+      text-align: center;
+    }
+  }
+}

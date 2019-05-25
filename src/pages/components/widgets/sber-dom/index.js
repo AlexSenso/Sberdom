@@ -1,1 +1,0 @@
-export { SberDom } from './sber-dom'

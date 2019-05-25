@@ -1,0 +1,5 @@
+User-Agent: *  
+Disallow: /*.pdf
+
+Sitemap: https://ovsyanka55.ru/sitemap.xml
+Host: https://ovsyanka55.ru
