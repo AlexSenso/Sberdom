@@ -1,11 +1,53 @@
 .news-page {
+  padding: 20px;
+}
 
+.news-item {
+  padding: 20px;
+  //height: 100px;
+  background-color: #fff;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+
+  &:not(:first-child) {
+    margin-top: 10px;
+  }
+}
+
+.news-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+
+.news-description-wrapper {
+  display: flex;
+  align-items: flex-end;
+}
+
+.news-description {
+  font-size: 16px;
+  font-weight: 600;
+  color: #3c3c3c;
+  margin-top: 15px;
+  max-width: 80%;
+}
+
+.news-date {
+  font-size: 12px;
+  text-align: right;
+  color: #7d8b8d;
+  flex-shrink: 0;
+}
+
+.thermometer {
+  margin-left: 20px;
 }
 
 .thermometer-item {
-  width: 580px;
-  height: 140px;
+  height: 100px;
   border: solid 1px #eef3f4;
+  padding: 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 .thermometer-icon {
@@ -13,4 +55,43 @@
   width: 50px;
   height: 50px;
   background-size: contain;
+}
+
+.thermometer-reading {
+  margin-left: 20px;
+}
+
+.thermometer-temperature {
+  font-size: 20px;
+  font-weight: bold;
+  color: #777677;
+}
+
+.thermometer-humidity {
+  font-size: 14px;
+  font-weight: bold;
+  color: #777677;
+}
+
+.thermometer-wrapper {
+  display: flex;
+  margin-top: 16px;
+}
+
+.thermometer-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+
+.notification-item {
+  background-color: #fefcdd;
+}
+
+.news-lists {
+  display: flex;
+
+  > * {
+    width: 48%;
+  }
 }

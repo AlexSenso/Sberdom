@@ -7,6 +7,15 @@
     flex-shrink: 0;
   }
 
+  &-menu {
+    width: 230px;
+
+    &-fixed {
+      position: fixed;
+      top: 0;
+    }
+  }
+
   &-menu-item {
     font-size: 14px;
     font-weight: bold;

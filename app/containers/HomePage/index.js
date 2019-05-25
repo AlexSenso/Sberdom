@@ -74,7 +74,7 @@ export function mapDispatchToProps(dispatch) {
   };
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   const temperature = _.get(state.toJS(), ['home', 'sensor_data', 'temperature'], {})
   const humidity = _.get(state.toJS(), ['home', 'sensor_data', 'humidity'], {})
   const motion = _.get(state.toJS(), ['home', 'motion'], {})
@@ -82,18 +82,9 @@ const mapStateToProps = (state) => {
   return {
     temperature: temperature.value,
     humidity: humidity.value,
-    motion: motion.motionDetected
+    motion: motion.motionDetected,
   }
 }
-
-// const mapStateToProps = createStructuredSelector({
-//   // repos: makeSelectRepos(),
-//   // username: makeSelectUsername(),
-//   // loading: makeSelectLoading(),
-//   // error: makeSelectError(),
-//   // catalog: makeSelectCatalog(),
-//   // feedbacks: makeSelectFeedbacks(),
-// });
 
 const withConnect = connect(
   mapStateToProps,
