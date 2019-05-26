@@ -10,6 +10,11 @@ import image3 from './images/copy-4.png';
 import image4 from './images/2.png';
 import image5 from './images/copy.png';
 import image6 from './images/copy-3.png';
+import image7 from './images/screen.png'
+import DialogTitle from "@material-ui/core/DialogTitle";
+import CloseIcon from "../../components/Header/img/close.svg";
+import DialogContent from "@material-ui/core/DialogContent";
+import Dialog from "@material-ui/core/Dialog";
 
 const menuItems = [
   'НОВЫЙ ВЫЗОВ',
@@ -30,6 +35,22 @@ export default class Service extends React.Component {
     event.preventDefault();
     this.setState({ activeSlide: parseInt(event.target.dataset.key) });
   };
+
+  handleClose = e => {
+    e.preventDefault();
+    this.setState({ isPaymentForm: false });
+  };
+
+  handleClick = e => {
+    e.preventDefault();
+    this.setState({isPaymentForm: true});
+    const today = new Date();
+    const dd = String(today.getDate()).padStart(2, '0');
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const yyyy = today.getFullYear();
+
+    const dateTime = `${mm}${dd}${yyyy}${Date.now()}`;
+  }
 
   render() {
     return (
@@ -58,7 +79,7 @@ export default class Service extends React.Component {
         </ul>
         <div className="service-lists">
           <ul className="service-list">
-            <li className="box-item service-item-wrapper">
+            <li onClick={this.handleClick} className="box-item service-item-wrapper">
               <div className="service-item">
                 <div className="service-item-title-wrapper">
                   <img className="service-item-image" src={image1} alt="icon" />
@@ -70,6 +91,34 @@ export default class Service extends React.Component {
                 <div className="service-item-link" />
               </div>
             </li>
+            <Dialog
+              onClose={this.handleClose}
+              open={this.state.isPaymentForm}
+              PaperProps={{
+                className: 'popup',
+                style: {
+                  maxWidth: '100%',
+                  marginLeft: '0',
+                  marginRight: '0',
+                },
+              }}
+            >
+              <DialogTitle>
+                <a href="/" className="close" onClick={this.handleClose}>
+                  <img src={CloseIcon} alt="close" className="close_img" />
+                </a>
+              </DialogTitle>
+              <DialogContent>
+                <div className="pay_iframe_wrapper">
+                  <img
+                    src={image7}
+                    align="left"
+                    height="700px"
+                    width="auto"
+                  />
+                </div>
+              </DialogContent>
+            </Dialog>
             <li className="box-item service-item-wrapper">
               <div className="service-item">
                 <div className="service-item-title-wrapper">
