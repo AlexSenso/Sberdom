@@ -185,7 +185,7 @@
 }
 
 .profile-lists {
-  width: 48%;
+  //width: 48%;
   flex-grow: 1;
 }
 
@@ -196,4 +196,42 @@
   background-size: 100%;
   margin-top: 20px;
   cursor: pointer;
+  height: 130px;
+}
+
+.profile-stub-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.profile-info-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.profile-info-address {
+  font-size: 16px;
+  color: #7d8b8d;
+  margin-top: 15px;
+}
+
+.profile-info {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.profile-photo {
+  background-image: url('./images/l7pFAeGuQis.jpg');
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  color: black;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 100%;
+  flex-shrink: 0;
+  margin-right: 15px;
+  margin-top: 20px;
 }

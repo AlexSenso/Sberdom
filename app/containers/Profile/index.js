@@ -75,86 +75,95 @@ export default class Profile extends React.Component {
           </li>
         ))}
       </ul>
-      <div className="profile-lists-wrapper">
-        <div className="service-lists profile-lists">
-          <ul className="service-list profile-item">
-            <li onClick={this.handleClick} className="box-item service-item-wrapper">
-              <div className="profile-cost active">155.0 ₽</div>
-              <div className="profile-wrapper">
-                <div className="service-item-title-wrapper">
-                  <div className="profile-item-title">Май 2019</div>
-                </div>
-                <div className="profile-item-description">
-                  Водоснабжение, электроэнергия, ремонт дома
-                </div>
-
-                <div className="service-item-pay button">
-                  ОПЛАТИТЬ
-                </div>
-              </div>
-            </li>
-            <Dialog
-              onClose={this.handleClose}
-              open={this.state.isPaymentForm}
-              PaperProps={{
-                className: 'popup',
-                style: {
-                  maxWidth: '100%',
-                  marginLeft: '0',
-                  marginRight: '0',
-                },
-              }}
-            >
-              <DialogTitle>
-                <a href="/" className="close" onClick={this.handleClose}>
-                  <img src={CloseIcon} alt="close" className="close_img" />
-                </a>
-              </DialogTitle>
-              <DialogContent>
-                <div className="pay_iframe_wrapper">
-                  <iframe
-                    title="paymentFrame"
-                    src="http://18.188.91.108/payWater"
-                    width="100%"
-                    height="100%"
-                    align="left"
-                  />
-                </div>
-              </DialogContent>
-            </Dialog>
-            <li className="box-item service-item-wrapper">
-              <div className="profile-cost">2050.55 ₽</div>
-              <div className="profile-wrapper">
-                <div className="service-item-title-wrapper">
-                  <div className="profile-item-title">Апрель 2019</div>
-                </div>
-                <div className="profile-item-description">
-                  Водоснабжение, электроэнергия, ремонт дома
-                </div>
-                <div className="service-item-pay payd">
-                  ОПЛАЧЕНО
-                </div>
-              </div>
-            </li>
-            <li className="box-item service-item-wrapper">
-              <div className="profile-cost">1080.90 ₽</div>
-              <div className="profile-wrapper">
-
-                <div className="service-item-title-wrapper">
-                  <div className="profile-item-title">Март 2019</div>
-                </div>
-                <div className="profile-item-description">
-                  Водоснабжение, электроэнергия, ремонт дома
-                </div>
-                <div className="service-item-pay payd">
-                  ОПЛАЧЕНО
-                </div>
-              </div>
-            </li>
-          </ul>
+      <div className="profile-stub-wrapper">
+        <div className="profile-info">
+          <div className="profile-photo" />
+          <div>
+            <div className="profile-info-name">Дмитрий Остапенко</div>
+            <div className="profile-info-address">Ленинградский проспект 32, кв.55</div>
+          </div>
         </div>
         <div className="profile-stub" />
       </div>
+
+      <div className="service-lists profile-lists">
+        <ul className="service-list profile-item">
+          <li onClick={this.handleClick} className="box-item service-item-wrapper">
+            <div className="profile-cost active">155.0 ₽</div>
+            <div className="profile-wrapper">
+              <div className="service-item-title-wrapper">
+                <div className="profile-item-title">Май 2019</div>
+              </div>
+              <div className="profile-item-description">
+                Водоснабжение, электроэнергия, ремонт дома
+              </div>
+
+              <div className="service-item-pay button">
+                ОПЛАТИТЬ
+              </div>
+            </div>
+          </li>
+          <Dialog
+            onClose={this.handleClose}
+            open={this.state.isPaymentForm}
+            PaperProps={{
+              className: 'popup',
+              style: {
+                maxWidth: '100%',
+                marginLeft: '0',
+                marginRight: '0',
+              },
+            }}
+          >
+            <DialogTitle>
+              <a href="/" className="close" onClick={this.handleClose}>
+                <img src={CloseIcon} alt="close" className="close_img" />
+              </a>
+            </DialogTitle>
+            <DialogContent>
+              <div className="pay_iframe_wrapper">
+                <iframe
+                  title="paymentFrame"
+                  src="http://18.188.91.108/payWater"
+                  width="100%"
+                  height="100%"
+                  align="left"
+                />
+              </div>
+            </DialogContent>
+          </Dialog>
+          <li className="box-item service-item-wrapper">
+            <div className="profile-cost">2050.55 ₽</div>
+            <div className="profile-wrapper">
+              <div className="service-item-title-wrapper">
+                <div className="profile-item-title">Апрель 2019</div>
+              </div>
+              <div className="profile-item-description">
+                Водоснабжение, электроэнергия, ремонт дома
+              </div>
+              <div className="service-item-pay payd">
+                ОПЛАЧЕНО
+              </div>
+            </div>
+          </li>
+          <li className="box-item service-item-wrapper">
+            <div className="profile-cost">1080.90 ₽</div>
+            <div className="profile-wrapper">
+
+              <div className="service-item-title-wrapper">
+                <div className="profile-item-title">Март 2019</div>
+              </div>
+              <div className="profile-item-description">
+                Водоснабжение, электроэнергия, ремонт дома
+              </div>
+              <div className="service-item-pay payd">
+                ОПЛАЧЕНО
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
     </div>
     );
   }
