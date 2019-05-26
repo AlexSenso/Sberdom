@@ -36,10 +36,12 @@ export class HomePage extends React.PureComponent {
     this.setState({ activeSlide: parseInt(event.target.dataset.key) });
   };
 
+  getMenuItem = itemName => {
+    this.setState({ activeSlide: itemName });
+  };
+
   render() {
     const Page = pages[this.state.activeSlide]
-    // const { } = this.props;
-    // const { } = this.state;
 
     return (
       <article>
@@ -52,7 +54,7 @@ export class HomePage extends React.PureComponent {
             className="left-sidebar"
           />
           <div className="region-content">
-            <Page />
+            <Page getMenuItem={this.getMenuItem} />
           </div>
         </div>
       </article>

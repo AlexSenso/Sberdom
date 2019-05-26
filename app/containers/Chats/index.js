@@ -4,7 +4,6 @@ import classNames from 'classnames';
 import votingImage from './images/bitmap@3x.png';
 
 import './Chats.scss';
-import image1 from '../Service/images/1.png';
 
 const menuItems = [
   'ОБСУЖДЕНИЯ',
@@ -14,9 +13,18 @@ const menuItems = [
 
 const ChatsItems = [
   {
+    type: 'voting',
+    title: 'Судьба дерева',
+    date: '25 мая 2019 / 12:40',
+    preview: 'Некоторым жильцам закрывает свет',
+    description: 'Некоторым жильцам закрывает свет в окна, а другим наоборот нравится зелень возле дома.',
+    img: votingImage,
+    actions: ['ОСТАВИТЬ', 'СРУБИТЬ'],
+  },
+  {
     type: 'chat',
     title: 'Василий Сорокин 331',
-    date: '25 мая 2019 / 19:44',
+    date: '24 мая 2019 / 19:44',
     preview: 'Привет! У нас есть мысль поста',
     messages: [
       {
@@ -30,15 +38,6 @@ const ChatsItems = [
         isYours: true,
       },
     ],
-  },
-  {
-    type: 'voting',
-    title: 'Судьба дерева',
-    date: '24 мая 2019 / 12:40',
-    preview: 'Некоторым жильцам закрывает свет',
-    description: 'Некоторым жильцам закрывает свет в окна, а другим наоборот нравится зелень возле дома.',
-    img: votingImage,
-    actions: ['ОСТАВИТЬ', 'СРУБИТЬ'],
   },
   {
     type: 'chat',
@@ -102,21 +101,24 @@ export default class Chats extends React.Component {
   render() {
     return (
       <div className="chats-page">
-        <ul className="camera-menu">
-          {_.map(menuItems, (item, key) => (
-            <li
-              key={key}
-              className={classNames([
-                'camera-menu-item',
-                { active: this.state.activeSlide === key },
-              ])}
-              onClick={this.onMenuClick}
-              data-key={key}
-            >
-              {item}
-            </li>
-          ))}
-        </ul>
+        <div className="chats-header">
+          <ul className="chats-menu">
+            {_.map(menuItems, (item, key) => (
+              <li
+                key={key}
+                className={classNames([
+                  'camera-menu-item',
+                  { active: this.state.activeSlide === key },
+                ])}
+                onClick={this.onMenuClick}
+                data-key={key}
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+          <button className="add-chat-action">+ НОВОЕ ОБСУЖДЕНИЕ</button>
+        </div>
         <div className="chats">
           <ul className="chats-list">
             {_.map(ChatsItems, (item, key) => (

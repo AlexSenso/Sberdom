@@ -13,6 +13,13 @@
   }
 }
 
+.news-item-link {
+  background-image: url('./images/slices.png');
+  background-repeat: no-repeat;
+  background-position: right center;
+  cursor: pointer;
+}
+
 @keyframes blink2 {
   25% { background-color: #fefcdd; }
   75% { background-color: #fff; }
@@ -109,6 +116,7 @@
 
 .notification-item {
   background-color: #fefcdd;
+  margin-top: 10px;
 }
 
 .news-lists {

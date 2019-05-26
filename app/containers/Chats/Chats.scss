@@ -157,3 +157,49 @@
   border: solid 2px #3c3c3c;
   cursor: pointer;
 }
+
+.add-chat-action {
+  border-radius: 3px;
+  border: solid 2px #3c3c3c;
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  color: #3c3c3c;
+  padding: 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.chats-header {
+  display: flex;
+  align-items: center;
+  padding: 32px 20px;
+  background-color: #fbfbfb;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.chats-menu {
+  display: flex;
+  align-items: flex-start;
+  flex-grow: 1;
+
+  &-item {
+    font-size: 14px;
+    font-weight: bold;
+    color: #7d8b8d;
+    cursor: pointer;
+
+    &:hover {
+      color: #3c3c3c;
+    }
+
+    &:not(:first-child) {
+      margin-left: 40px;
+    }
+
+    &.active {
+      color: #3c3c3c;
+      border-bottom: solid 5px #3c3c3c;
+    }
+  }
+}
