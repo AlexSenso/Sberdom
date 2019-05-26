@@ -65,7 +65,7 @@ export default class Service extends React.Component {
                   <div className="service-item-title">Сантехник</div>
                 </div>
                 <div className="service-item-description">
-                  Раковины, трубы, унитазы
+                  Водоснабжение, отопление, канализация, смеситель
                 </div>
                 <div className="service-item-link" />
               </div>
@@ -77,7 +77,7 @@ export default class Service extends React.Component {
                   <div className="service-item-title">Электрик</div>
                 </div>
                 <div className="service-item-description">
-                  Лампочки, розетки, провода
+                  Осветительные приборы, электропроводка, розетки и выключатели
                 </div>
                 <div className="service-item-link" />
               </div>
@@ -89,7 +89,7 @@ export default class Service extends React.Component {
                   <div className="service-item-title">Мастер по технике</div>
                 </div>
                 <div className="service-item-description">
-                  Теливизор, стиральная машина, посудомойка
+                  Теливизор, стиральная машина, микроволновка, посудомойка
                 </div>
                 <div className="service-item-link" />
               </div>
@@ -103,7 +103,7 @@ export default class Service extends React.Component {
                   <div className="service-item-title">Скорая помощь</div>
                 </div>
                 <div className="service-item-description">
-                  Инфаркты, передозы, простуда
+                  Несчастный случай, травма или обострение хронического заболевания
                 </div>
                 <div className="service-item-link" />
               </div>
@@ -115,7 +115,7 @@ export default class Service extends React.Component {
                   <div className="service-item-title">Полиция</div>
                 </div>
                 <div className="service-item-description">
-                  Шумные соседи, кражи и убийства, запрещенные мемасы
+                  Поддержание порядка, предотвращение преступлений и других правонарушений
                 </div>
                 <div className="service-item-link" />
               </div>
@@ -127,7 +127,7 @@ export default class Service extends React.Component {
                   <div className="service-item-title">Пожарные</div>
                 </div>
                 <div className="service-item-description">
-                  Пожар
+                  Задымление, пожар
                 </div>
                 <div className="service-item-link" />
               </div>
