@@ -62,7 +62,7 @@ export default class Service extends React.Component {
               <div className="service-item">
                 <div className="service-item-title-wrapper">
                   <img className="service-item-image" src={image1} alt="icon" />
-                  <div className="service-item-title">Сантехника</div>
+                  <div className="service-item-title">Сантехник</div>
                 </div>
                 <div className="service-item-description">
                   Раковины, трубы, унитазы
@@ -74,7 +74,7 @@ export default class Service extends React.Component {
               <div className="service-item">
                 <div className="service-item-title-wrapper">
                   <img className="service-item-image" src={image2} alt="icon" />
-                  <div className="service-item-title">Электрика</div>
+                  <div className="service-item-title">Электрик</div>
                 </div>
                 <div className="service-item-description">
                   Лампочки, розетки, провода
@@ -86,7 +86,7 @@ export default class Service extends React.Component {
               <div className="service-item">
                 <div className="service-item-title-wrapper">
                   <img className="service-item-image" src={image3} alt="icon" />
-                  <div className="service-item-title">Мастера по технике</div>
+                  <div className="service-item-title">Мастер по технике</div>
                 </div>
                 <div className="service-item-description">
                   Теливизор, стиральная машина, посудомойка
@@ -100,7 +100,7 @@ export default class Service extends React.Component {
               <div className="service-item">
                 <div className="service-item-title-wrapper">
                   <img className="service-item-image" src={image4} alt="icon" />
-                  <div className="service-item-title">Скорую помощь</div>
+                  <div className="service-item-title">Скорая помощь</div>
                 </div>
                 <div className="service-item-description">
                   Инфаркты, передозы, простуда
@@ -112,7 +112,7 @@ export default class Service extends React.Component {
               <div className="service-item">
                 <div className="service-item-title-wrapper">
                   <img className="service-item-image" src={image5} alt="icon" />
-                  <div className="service-item-title">Полицию</div>
+                  <div className="service-item-title">Полиция</div>
                 </div>
                 <div className="service-item-description">
                   Шумные соседи, кражи и убийства, запрещенные мемасы
@@ -124,7 +124,7 @@ export default class Service extends React.Component {
               <div className="service-item">
                 <div className="service-item-title-wrapper">
                   <img className="service-item-image" src={image6} alt="icon" />
-                  <div className="service-item-title">Пожарных</div>
+                  <div className="service-item-title">Пожарные</div>
                 </div>
                 <div className="service-item-description">
                   Пожар
