@@ -53,7 +53,7 @@ export default class Profile extends React.Component {
 
     return (
       <div className="profile-page">
-        <button onClick={this.handleClick}>ВАНЯ ЖМИ</button>
+        <button onClick={this.handleClick}>Оплатить водопровод</button>
         <Dialog
           onClose={this.handleClose}
           open={this.state.isPaymentForm}
@@ -75,7 +75,8 @@ export default class Profile extends React.Component {
             <div className="pay_iframe_wrapper">
               <iframe
                 title="paymentFrame"
-                src="http://18.188.91.108/"
+                src="http://18.188.91.108/payWater"
+                // TODO: second button - src="http://18.188.91.108/payEnergy"
                 width="100%"
                 height="100%"
                 align="left"
