@@ -18,8 +18,8 @@ import Chats from '../Chats';
 
 import { LeftSidebar } from '../App/components/LeftSidebar';
 
-const mainMenuItems = ['НОВОСТИ', 'ОБЩЕНИЕ', 'СЕРВИС', 'ИВАН', 'ВОКРУГ'];
-const pages = [News, Chats, Service, Profile, Camera];
+const mainMenuItems = ['НОВОСТИ', 'ОБЩЕНИЕ', 'СЕРВИС', 'ВОКРУГ', 'ДМИТРИЙ 55'];
+const pages = [News, Chats, Service, Camera, Profile];
 
 /* eslint-disable react/prefer-stateless-function */
 export class HomePage extends React.PureComponent {
