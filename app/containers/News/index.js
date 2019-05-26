@@ -67,6 +67,11 @@ export class News extends React.Component {
     this.props.getMenuItem(1)
   };
 
+  goToProfile = event => {
+    event.preventDefault();
+    this.props.getMenuItem(4)
+  };
+
   render() {
     return (
       <div className="news-page">
@@ -125,7 +130,8 @@ export class News extends React.Component {
               </div>
             </div>
             <div
-              className="notification-item news-item"
+              className="notification-item news-item news-item-link"
+              onClick={this.goToProfile}
             >
               <div className="news-title">Оплатить счета за май</div>
               <div className="news-description-wrapper">
