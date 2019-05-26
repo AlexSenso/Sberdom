@@ -138,7 +138,7 @@ export default class Service extends React.Component {
                   <div className="service-item-title">Мастер по технике</div>
                 </div>
                 <div className="service-item-description">
-                  Теливизор, стиральная машина, микроволновка, посудомойка
+                  Телевизор, стиральная машина, микроволновка, посудомойка
                 </div>
                 <div className="service-item-link" />
               </div>
