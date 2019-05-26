@@ -20,6 +20,10 @@
   &:hover {
     background-color: #fff;
   }
+
+  &.active {
+    background-color: #fff;
+  }
 }
 
 .chats-title {
@@ -116,4 +120,40 @@
   margin-top: 20px;
   padding: 30px 20px 0 20px;
   border-top: 1px solid #eef3f4;
+}
+
+
+.voting-image {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.voting-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}
+
+.voting-description {
+  font-size: 16px;
+  color: #3c3c3c;
+  margin-top: 20px;
+}
+
+.voting-actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 60px;
+}
+
+.voting-action {
+  font-size: 14px;
+  font-weight: 800;
+  text-align: center;
+  color: #3c3c3c;
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 3px;
+  border: solid 2px #3c3c3c;
+  cursor: pointer;
 }
