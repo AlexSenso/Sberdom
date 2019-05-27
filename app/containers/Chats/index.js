@@ -198,6 +198,25 @@ export default class Chats extends React.Component {
                   ))}
                 </div>
               }
+              {
+                !this.state.showActions &&
+                <div className="voting-proc">
+                  <div className="voting-proc-progress-title-wrapper">
+                    <div className="voting-proc-progress-title">Оставить</div>
+                    <div className="voting-proc-progress-title-proc">82%</div>
+                  </div>
+                  <div className="voting-proc-progress-wrapper-1 voting-proc-progress-wrapper">
+                    <div className="voting-proc-progress voting-proc-progress-1" />
+                  </div>
+                  <div className="voting-proc-progress-title-wrapper">
+                    <div className="voting-proc-progress-title">Срубить</div>
+                    <div className="voting-proc-progress-title-proc">18%</div>
+                  </div>
+                  <div className="voting-proc-progress-wrapper-2 voting-proc-progress-wrapper">
+                    <div className="voting-proc-progress voting-proc-progress-2" />
+                  </div>
+                </div>
+              }
             </div>
           }
         </div>
