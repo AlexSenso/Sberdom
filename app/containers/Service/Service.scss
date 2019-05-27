@@ -157,8 +157,18 @@
   font-size: 20px;
   font-weight: bold;
   color: #fff;
-  padding: 25px 30px;
+  padding: 0 30px;
   border-radius: 3px;
   background-color: #00d97d;
-  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 0;
+  overflow: hidden;
+  transition: all 150ms ease-in-out;
+
+  &.active {
+    margin-top: 30px;
+    height: 68px;
+  }
 }

@@ -80,7 +80,9 @@ export default class Service extends React.Component {
             </li>
           ))}
         </ul>
-        {this.state.showNotification && <div className="service-notification">Заявка на вызов сантехника успешно отправлена 👍🏻</div>}
+        <div className={classNames("service-notification", this.state.showNotification && "active")}>
+          <div>Заявка на вызов сантехника успешно отправлена 👍🏻</div>
+        </div>
         <div className="service-lists">
           <ul className="service-list">
             <li onClick={this.handleClick} className="box-item service-item-wrapper">
