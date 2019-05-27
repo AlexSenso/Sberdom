@@ -89,7 +89,7 @@ export default class Profile extends React.Component {
       <div className="service-lists profile-lists">
         <ul className="service-list profile-item">
           <li onClick={this.handleClick} className="box-item service-item-wrapper">
-            <div className="profile-cost active">155.0 ₽</div>
+            <div className="profile-cost active">СКИДКА -20%</div>
             <div className="profile-wrapper">
               <div className="service-item-title-wrapper">
                 <div className="profile-item-title">Май 2019</div>
@@ -99,7 +99,7 @@ export default class Profile extends React.Component {
               </div>
 
               <div className="service-item-pay button">
-                ОПЛАТИТЬ
+                ОПЛАТИТЬ 1500 РУБ.
               </div>
             </div>
           </li>

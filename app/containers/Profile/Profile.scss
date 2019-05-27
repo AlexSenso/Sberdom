@@ -157,23 +157,22 @@
   z-index: 3;
 
   &.active {
-    background-color: #f84227;
+    background-color: #00d97d;
   }
 }
 
 
 .service-item-pay.button {
   border-radius: 3px;
-  border: solid 2px #3c3c3c;
   background-color: #fff;
   font-size: 14px;
   font-weight: bold;
   color: #3c3c3c;
   padding: 10px;
   cursor: pointer;
-  width: 100px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: -15px;
 }
 
 .profile-wrapper {
