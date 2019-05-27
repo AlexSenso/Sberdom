@@ -116,16 +116,16 @@ export class News extends React.Component {
               <div className="thermometer-wrapper">
                 <div className="thermometer-icon" />
                 <div className="thermometer-reading">
-                  {this.props.temperature && (
-                    <div className="thermometer-temperature">
-                      +{this.props.temperature}º
-                    </div>
-                  )}
-                  {this.props.humidity && (
-                    <div className="thermometer-humidity">
-                      ВЛАЖНОСТЬ {this.props.humidity}%
-                    </div>
-                  )}
+                  {/*{this.props.temperature && (*/}
+                  <div className="thermometer-temperature">
+                    +24º
+                  </div>
+                  {/*)}*/}
+                  {/*{this.props.humidity && (*/}
+                  <div className="thermometer-humidity">
+                    ВЛАЖНОСТЬ 35%
+                  </div>
+                  {/*)}*/}
                 </div>
               </div>
             </div>

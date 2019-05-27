@@ -10,7 +10,7 @@ import image3 from './images/copy-4.png';
 import image4 from './images/2.png';
 import image5 from './images/copy.png';
 import image6 from './images/copy-3.png';
-import image7 from './images/screen.png'
+import slicesImg from './images/slices2.png';
 import DialogTitle from "@material-ui/core/DialogTitle";
 import CloseIcon from "../../components/Header/img/close.svg";
 import DialogContent from "@material-ui/core/DialogContent";
@@ -28,6 +28,9 @@ export default class Service extends React.Component {
 
     this.state = {
       activeSlide: 0,
+      isServiceForm: false,
+      plumberValue: 'Из раковины вода не уходит',
+      showNotification: false,
     };
   }
 
@@ -38,19 +41,19 @@ export default class Service extends React.Component {
 
   handleClose = e => {
     e.preventDefault();
-    this.setState({ isPaymentForm: false });
+    this.setState({ isServiceForm: false });
   };
 
   handleClick = e => {
     e.preventDefault();
-    this.setState({isPaymentForm: true});
-    const today = new Date();
-    const dd = String(today.getDate()).padStart(2, '0');
-    const mm = String(today.getMonth() + 1).padStart(2, '0');
-    const yyyy = today.getFullYear();
-
-    const dateTime = `${mm}${dd}${yyyy}${Date.now()}`;
+    this.setState({isServiceForm: true});
   }
+
+  handleClickCloseButton = e => {
+    e.preventDefault();
+    this.setState({ isServiceForm: false });
+    this.setState({ showNotification: true });
+  };
 
   render() {
     return (
@@ -77,6 +80,7 @@ export default class Service extends React.Component {
             </li>
           ))}
         </ul>
+        {this.state.showNotification && <div className="service-notification">Заявка на вызов сантехника успешно отправлена 👍🏻</div>}
         <div className="service-lists">
           <ul className="service-list">
             <li onClick={this.handleClick} className="box-item service-item-wrapper">
@@ -93,7 +97,7 @@ export default class Service extends React.Component {
             </li>
             <Dialog
               onClose={this.handleClose}
-              open={this.state.isPaymentForm}
+              open={this.state.isServiceForm}
               PaperProps={{
                 className: 'popup',
                 style: {
@@ -109,13 +113,36 @@ export default class Service extends React.Component {
                 </a>
               </DialogTitle>
               <DialogContent>
-                <div className="pay_iframe_wrapper">
-                  <img
-                    src={image7}
-                    align="left"
-                    height="700px"
-                    width="auto"
-                  />
+                <div>
+                  <form className="request-form">
+                    <div>
+                      <div><label className="service-field-label">Опишите проблему</label></div>
+                      <textarea defaultValue={this.state.plumberValue} style={{width: 603, height: 120}} />
+                    </div>
+                    <div className="add-photo-field service-field-wrapper">
+                      <div><label className="service-field-label">Приложите фотографии</label></div>
+                      <img className="service-field-image" src={slicesImg} alt="icon" />
+                      {/*<input type="file" name="photo" multiple />*/}
+                    </div>
+                    <div className="service-field-wrapper">
+                      <div><label className="service-field-label">Когда удобно?</label></div>
+                      <div className="service-checkbox-wrappers">
+                        <div className="service-checkbox-wrapper">
+                          <input id="1" type="checkbox" />
+                          <label className="service-checkbox-label" htmlFor="1">Утром</label>
+                        </div>
+                        <div className="service-checkbox-wrapper">
+                          <input id="2" type="checkbox" />
+                          <label className="service-checkbox-label" htmlFor="2">Днём</label>
+                        </div>
+                        <div className="service-checkbox-wrapper">
+                          <input id="3" type="checkbox" />
+                          <label className="service-checkbox-label" htmlFor="3">Вечером</label>
+                        </div>
+                      </div>
+                    </div>
+                    <button onClick={this.handleClickCloseButton} className="service-form-button">ОТПРАВИТЬ ЗАЯВКУ</button>
+                  </form>
                 </div>
               </DialogContent>
             </Dialog>

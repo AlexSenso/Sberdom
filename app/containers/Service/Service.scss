@@ -92,3 +92,73 @@
     top: calc(50% - 12px);
   }
 }
+
+.request-form {
+
+  .service-field-label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  textarea {
+    display: block;
+  }
+
+  .add-photo-field {
+    margin-top: 60px;
+  }
+}
+
+.service-checkbox-label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #3c3c3c;
+  margin-left: 4px;
+  line-height: 1;
+}
+
+.service-checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  margin-right: 18px;
+
+  input {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.service-field-wrapper {
+  margin-top: 50px;
+}
+
+.service-checkbox-wrappers {
+  display: flex;
+  align-items: center;
+}
+
+.service-form-button {
+  font-size: 14px;
+  font-weight: bold;
+  color: #3c3c3c;
+  padding: 13px 0;
+  border-radius: 3px;
+  border: solid 2px #3c3c3c;
+  width: 100%;
+  background-color: #fff;
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+.service-notification {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  padding: 25px 30px;
+  border-radius: 3px;
+  background-color: #00d97d;
+  margin-top: 30px;
+}
